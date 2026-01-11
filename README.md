@@ -105,3 +105,97 @@ src/main/java/edu/project/medicalofficemanagement
 ├── security
 ├── service
 └── validation
+
+## 🔄 Flujo principal de negocio
+
+1. El **Paciente** o **Recepcionista** registra y actualiza los datos del paciente.
+2. Se programa una **Cita médica** asignando un **Doctor** y un **Consultorio disponible**.
+3. El **Doctor** accede a la cita y registra la consulta en la **Historia Médica**.
+4. El sistema:
+   - Valida la disponibilidad de horarios
+   - Gestiona estados de citas (*programada, en curso, completada, cancelada*)
+   - Actualiza historiales médicos
+   - Controla el acceso según roles
+5. El **Administrador** supervisa las operaciones, gestiona usuarios y configura el sistema.
+
+---
+
+## 📡 API REST (resumen)
+
+- Autenticación y autorización JWT (`/api/auth`)
+- Gestión de usuarios y roles
+- Gestión de pacientes
+- Gestión de doctores y especializaciones
+- Programación y seguimiento de citas
+- Historias clínicas y registros médicos
+- Administración de consultorios
+- Control de acceso basado en roles
+
+📄 **La documentación completa de endpoints se encuentra incluida en el repositorio.**
+
+---
+
+## 🏥 Módulos principales
+
+### 👤 Gestión de Pacientes
+- Registro y actualización de datos personales
+- Consulta de historial médico
+- Vinculación con citas y doctores
+
+### 📅 Gestión de Citas
+- Programación de citas médicas
+- Asignación de doctor y consultorio
+- Control de estados y disponibilidad
+- Notificaciones y recordatorios
+
+### 🩺 Personal Médico
+- Registro de doctores y especialidades
+- Gestión de disponibilidad
+- Asignación de consultorios
+
+### 📋 Historias Médicas
+- Registro de consultas y diagnósticos
+- Seguimiento de tratamientos
+- Acceso controlado por rol
+
+---
+
+## 🧪 Testing y calidad
+
+- Pruebas unitarias con **JUnit** y **Mockito**
+- Pruebas de integración con **Testcontainers (PostgreSQL real)**
+- Pruebas de seguridad con **Spring Security Test**
+- Validación de DTOs y entidades
+- Cobertura de servicios y controladores
+
+---
+
+## 🚀 Despliegue
+
+- Aplicación contenerizable con **Docker**
+- Compatible con **Railway**, **Render** y **Heroku**
+- Preparado para pipelines **CI/CD**
+- Configuración externa mediante **variables de entorno**
+- Soporte para perfiles de Spring (`dev`, `prod`)
+
+---
+
+## 👨‍💻 Autor
+
+**José Alberto Méndez Domínguez**  
+Estudiante de Ingeniería de Software (8° semestre)  
+Backend Developer – Java & Spring Boot  
+📍 Santa Marta, Colombia
+
+---
+
+## 📝 Notas técnicas
+
+- Integración optimizada **Lombok + MapStruct** mediante `lombok-mapstruct-binding`
+- Validaciones personalizadas con **Bean Validation**
+- Manejo centralizado de excepciones
+- Serialización eficiente mediante **DTOs**
+- Pruebas con contenedores PostgreSQL reales usando **Testcontainers**
+
+
+
