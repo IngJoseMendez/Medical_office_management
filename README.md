@@ -103,6 +103,7 @@ src/main/java/edu/project/medicalofficemanagement
 ├── security
 ├── service
 └── validation
+```
 
 ---
 
