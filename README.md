@@ -105,6 +105,7 @@ src/main/java/edu/project/medicalofficemanagement
 ├── security
 ├── service
 └── validation
+---
 
 ## 🔄 Flujo principal de negocio
 
